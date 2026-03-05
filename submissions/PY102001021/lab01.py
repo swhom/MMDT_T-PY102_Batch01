@@ -59,12 +59,12 @@ def reverseList(head):
     Time: O(n), Space: O(1)
     """
     prev = None
-    crt = head 
-    while crt is not None:
-        new_node = crt.next
-        crt.next = prev
-        prev = crt
-        crt = new_node
+    curr = head 
+    while curr is not None:
+        new_node = curr.next
+        curr.next = prev
+        prev = curr
+        curr = new_node
     return prev
   
 
@@ -87,7 +87,7 @@ def doubleIt(head):
     curr = head
     carry = 0 
     
-    while crt :
+    while curr :
         total = curr.val*2 +carry
         curr.val = total % 10
         carry = total // 10
