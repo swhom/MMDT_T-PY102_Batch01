@@ -66,8 +66,7 @@ def reverseList(head):
         prev = crt
         crt = new_node
     return prev
-    # TODO: Implement
-    raise NotImplementedError
+  
 
 def doubleIt(head):
     """
@@ -84,7 +83,7 @@ def doubleIt(head):
     - Use linked-list operations/pointer logic.
     - Avoid converting the entire list into an integer/string for the core solution.
     """
-   
+    head = reverseList(head)
     crt = head
     carry = 0 
     
@@ -101,8 +100,3 @@ def doubleIt(head):
         crt = crt.next 
         
     return reverseList(head)
-       
-
-    # TODO: Implement
-    raise NotImplementedError
-
