@@ -84,19 +84,19 @@ def doubleIt(head):
     - Avoid converting the entire list into an integer/string for the core solution.
     """
     head = reverseList(head)
-    crt = head
+    curr = head
     carry = 0 
     
     while crt :
-        total = crt.val*2 +carry
-        crt.val = total % 10
+        total = curr.val*2 +carry
+        curr.val = total % 10
         carry = total // 10
     
             
         if not curr.next and carry::
-            crt.next = Node(carry)
+            curr.next = Node(carry)
             carry = 0 
             
-        crt = crt.next 
+        curr = curr.next 
         
     return reverseList(head)
