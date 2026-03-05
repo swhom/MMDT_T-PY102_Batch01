@@ -93,7 +93,7 @@ def doubleIt(head):
         carry = total // 10
     
             
-        if crt.next is None and carry:
+        if not curr.next and carry::
             crt.next = Node(carry)
             carry = 0 
             
